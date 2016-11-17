@@ -26,13 +26,55 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Simple Login Form</h1>
+
+      <h1 class="header center orange-text">
+        <?php
+       // define("const1","hiiii");
+       // echo const1;
+     // $tmp1= "hi tmp1";
+      //$tmp2= "225" ;
+      //echo $tmp1 . $tmp2;
+        //echo strlen($tmp1);
+       //  strpos($tmp1,"mp1");
+      $arr = array();
+        //$arr[0] = "first";
+       $asoc = array('name' => "sare",'tel'=> "1234");
+       $form1 = array('firstname' => "firstname",'lastname'=> "lastname",'tel' =>"enter phone number");
+
+        echo $asoc['name'];
+        $temp = array();
+        $temp[0]="s";
+        $temp[1]="sdfg";
+        $temp[2]="hbknj";
+//
+//        for($i=0 ; $i<count($temp);$i++)
+//        {
+//        // echo $temp[$i]."<br>";
+//        }
+//        foreach ($asoc as $x )
+        //echo count($arr);
+       // echo str_replace("mp1","hello",$tmp1);
+      //echo "helllo";
+      ?>
+
+      </h1>
       <div class="row center">
         <div class="card col s4 offset-s4 grey lighten-4">
      		<!-- <h5 class="header col s12 light">Please enter Login Status</h5>	 -->
      		<br>
         	<sapn class="card-title center">Please Login Here</sapn>
         <div class="card-content center">
+          <?php
+          foreach ($form1 as $label => $placeholder)
+          {
+            echo '<label>'.$label.'</label>
+        <input type="text" name="'.$label.'" placeholder="'.$placeholder.'">';
+
+          }
+          ?>
+
+
+
         	<input type="text" name="name" placeholder="Username">
         	<input type="password" name="password" placeholder="password">
         </div>
@@ -49,12 +91,11 @@
     </div>
   </div>
 
-<!-- 
+
   <div class="container">
     <div class="section">
- -->
-      <!--   Icon Section   -->
-    <!--   <div class="row">
+
+       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
@@ -112,6 +153,11 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
+            <?php
+            foreach ($asoc as $x => $x_value){
+              echo '<li><a class="white-text" href="#!">.x_value</a></li>';
+            }
+            ?>
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
