@@ -101,7 +101,17 @@ define("const1","ggg");
       }*/
 
       $form1=array('firstname'=>"firstname",'lastname'=>"lastname",'tel'=>"enter your phone");
+      echo "<br>";
 
+      echo $_SERVER['PHP_SELF'];
+   /*   $_REQUEST['NAME']
+      $_POST
+      $_GET
+      $_FILES['FILE_NAME']
+      $_COOKIE['COOKIE']
+      $_SESSION
+
+*/
       ?>
       </h1>
 
@@ -115,10 +125,13 @@ define("const1","ggg");
 <!--        	<input type="text" name="name" placeholder="Username">-->
 <!--        	<input type="password" name="password" placeholder="password">-->
           <?php
+
           foreach($form1 as $label => $placeholder){
             echo '<label>'.$label.'</label>
                   <input type="text" name="'.$label.'" placeholder="'.$placeholder.'">';
           }
+
+
           ?>
         </div>
 
