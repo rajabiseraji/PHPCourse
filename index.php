@@ -26,16 +26,102 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Simple Login Form</h1>
+      <h1 class="header center orange-text">
+
+
+
+      <?php
+define("const1","ggg");
+      $tmp1 = "hello";
+      $tmp2 = 5;
+      $tmp3 = 1000;
+      $arr = array("jhgh",2,"ytgyg");
+
+      echo  $tmp1.  $tmp2;
+      echo "\n";
+      echo  strlen($tmp1);
+      echo "\n";
+      echo str_word_count($tmp1);
+      echo "\n";
+      echo strrev($tmp1);
+      echo "\n";
+      echo strpos($tmp1,"l");
+      echo "\n";
+      echo str_replace("llo","rr",$tmp1);
+      echo "\n";
+      echo const1;
+      echo "<br>";
+
+      if ($tmp3==1000){
+        echo "equal";
+      }
+      echo "<br>";
+      echo $arr[2];
+
+      echo "<br>";
+      $arr1=array();
+      $arr1[0]="tttt";
+      echo $arr1[0];
+      echo "<br>";
+
+      echo count($arr1);
+      echo "<br>";
+
+      $arra=explode("_","str_rrr");
+      echo $arra[0];
+      echo "<br>";
+
+      $asoc=array('name'=>"rahel",'tell'=>545);
+      echo $asoc['name'];
+      echo "<br>";
+
+      $tmp4=array();
+      $tmp4[0]="53455";
+      $tmp4[1]="huhujh";
+
+      for($i=0;$i<count($tmp4); $i++){
+        echo $tmp4[$i];
+      }
+
+      echo "<br>";
+      foreach($asoc as $x => $x_value){
+        echo $x_value;
+      }
+
+
+      echo "<br>";
+  /*    foreach($asoc as $x => $x_value){
+        echo '<div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">'.$x_value.'</a></li>
+
+          </ul>
+        </div>';
+      }*/
+
+      $form1=array('firstname'=>"firstname",'lastname'=>"lastname",'tel'=>"enter your phone");
+
+      ?>
+      </h1>
+
+
       <div class="row center">
         <div class="card col s4 offset-s4 grey lighten-4">
      		<!-- <h5 class="header col s12 light">Please enter Login Status</h5>	 -->
      		<br>
         	<sapn class="card-title center">Please Login Here</sapn>
-        <div class="card-content center">
-        	<input type="text" name="name" placeholder="Username">
-        	<input type="password" name="password" placeholder="password">
+<!--        <div class="card-content center">-->
+<!--        	<input type="text" name="name" placeholder="Username">-->
+<!--        	<input type="password" name="password" placeholder="password">-->
+          <?php
+          foreach($form1 as $label => $placeholder){
+            echo '<label>'.$label.'</label>
+                  <input type="text" name="'.$label.'" placeholder="'.$placeholder.'">';
+          }
+          ?>
         </div>
+
         <div class="card-action center">
         	<button class="btn waves-effect waves-light" type="submit" name="action">Click Me!</button>
         </div>	
@@ -49,12 +135,12 @@
     </div>
   </div>
 
-<!-- 
+
   <div class="container">
     <div class="section">
- -->
-      <!--   Icon Section   -->
-    <!--   <div class="row">
+
+        Icon Section
+     <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
@@ -103,6 +189,17 @@
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
+
+            <?php
+
+            foreach($asoc as $x => $x_value){
+              echo '<li><a class="white-text" href="#!">'. $x_value.'</a></li>';
+            }
+
+            ?>
+
+
+
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
