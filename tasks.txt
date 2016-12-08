@@ -1,0 +1,37 @@
+1- create users table - user_id, user_name, user_register_date, password
+
+2- in registeer page: on submit: 
+	{
+		filter inputs;
+		if all are correct -> add a user to users table
+		create a session for the user
+		keep user and pass of user in this session
+
+		redirect to home.php
+	}
+
+3- create some pages: 
+	home.php
+	blog.php
+	if user is not logged in, redirect to login page
+
+
+4- login page: 
+	form filtering and stuff .. 
+	on submit {
+		check user database table
+		if exist ... set session
+		if !exist ... redirect to register.php
+	}
+
+5- in home.php : {
+	have a table called posts 
+	posts have: post_id, post_body(bigtext)
+	use a html template and show all the posts!
+}
+
+
+in navbar : 
+
+	if logged in: show a logout button and name
+	if not show nothing
