@@ -45,6 +45,10 @@
                 echo $message = $upload_errors[$error];
             }
 
+
+//            header('Location: http://google.com/');
+//            header("HTTP/1.0 404 NOT Found");
+//            exit();
         }
 
         ?>
