@@ -36,10 +36,14 @@ require_once "views/header.php";
 		$password = $_POST['password'];
 		$admin=find_admin_by_username($username);
 		if ($admin){
-			$_SESSION['login'] = true;
+//
 			$_SESSION['username'] = $admin['user_name'];
 			$_SESSION['password'] = $admin['password'];
-			redirect_to('views/home.php');
+			if ($username == $admin['user_name'] && $password == $admin['password']){
+				$_SESSION['login'] = true;
+				redirect_to('views/home.php');
+			}
+
 		}
 	}
 
