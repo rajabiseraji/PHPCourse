@@ -4,7 +4,7 @@
         <h1 class="header center orange-text">Login
 
             <?php
-            $form1=array('UserName'=>"enter your username",'Password'=>"enter your password",'Email'=>"enter your email");
+            $form1=array('UserName'=>"enter your username",'Password'=>"enter your password");
             ?>
 
 
@@ -13,7 +13,7 @@
 
         <div class="row center">
 
-            <form action="../functions/handler.php" method="post" enctype="multipart/form-data">
+            <form action="./check.php" method="post" enctype="multipart/form-data">
             <div class="card col s4 offset-s4 red lighten-4">
 
                 <br>
@@ -24,7 +24,7 @@
 
                 foreach($form1 as $label => $placeholder){
                     echo '<label style="color=black;font-size: large;" >'.$label.'</label>
-                  <input type="text" name="'.$label.'" placeholder="'.$placeholder.'">';
+                  <input type="text" name="'.$label.'" placeholder="'.$placeholder.'" required>';
                 }
 
                 ?>
